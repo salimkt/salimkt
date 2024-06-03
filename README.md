@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?text=Hi there, I'm Salim! 👋&animation=fadeIn&type=waving&color=gradient&height=100"/>
+  <img src="https://capsule-render.vercel.app/api?text=Hi%20there,%20I%27m%20Salim!%20%F0%9F%91%8B%20&animation=fadeIn&type=waving&color=gradient&height=100"/>
 </p>
 
 
@@ -8,13 +8,14 @@
 <h1 align="center">
   Let's Connect and have a Chat!💬
 </h1>
-<!-- <p align="center"> -->
+<p align="center">
 <!-- <a href="https://piyushmalhotra.netlify.app/">
   <img height="50" src="https://user-images.githubusercontent.com/46517096/166972883-f5f1d88c-0246-4374-88ac-ded0f2cf0699.png"/>
 </a> -->
 <a href="https://www.linkedin.com/in/muhammed-salim-k-t-498125165/">
   <img height="50" src="https://user-images.githubusercontent.com/46517096/166973395-19676cd8-f8ec-4abf-83ff-da8243505b82.png"/>
 </a>
+
 <!-- <a href="https://thepiyushmalhotra.medium.com/">
   <img height="50" src="https://user-images.githubusercontent.com/46517096/166973962-d05d145a-b6a0-4643-bd3d-5ac845679367.png"/>
 </a> -->
@@ -27,9 +28,8 @@
 <!-- <a href="https://www.instagram.com/thepiyushmalhotra/">
   <img height="50" src="https://user-images.githubusercontent.com/46517096/166974368-9798f39f-1f46-499c-b14e-81f0a3f83a06.png"/>
 </a> -->
-<!-- </p> -->
+</p> 
 
-- [Email](mailto:salimkt25@gmail.com)
 
 I'm an experienced software developer specializing in React Native. I also have strong expertise in React, Angular, Next.js, Java Spring Boot, and Flutter. Welcome to my GitHub profile!
 
@@ -63,6 +63,8 @@ I'm an experienced software developer specializing in React Native. I also have 
 ## 📈 GitHub Stats
 
 ![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=salimkt&show_icons=true&theme=radical)
+
+![Snake animation](https://github.com/thepiyushmalhotra/thepiyushmalhotra/blob/output/github-contribution-grid-snake.svg)
 
 ## 💬 Let's Connect
 
