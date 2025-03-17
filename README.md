@@ -32,9 +32,9 @@
 
 
 I'm an experienced software developer specializing in React Native. I also have strong expertise in React, Angular, Next.js, Java Spring Boot, and Flutter. Welcome to my GitHub profile!
-<div align="center">
+<!-- <div align="center">
 <img width=480 height=270 src="https://media.tenor.com/ZgcvQxqwJpMAAAAi/arbiter-vildred-epic-seven.gif" ></img>
-</div>
+</div> -->
 ---
 
 <h2> 👨🏻‍💻 &nbsp;A Little Bit About Me and My Interests</h2>
