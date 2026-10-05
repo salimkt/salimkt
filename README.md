@@ -26,12 +26,19 @@ I build production LLM systems end to end — agent orchestration, retrieval, mo
 
 **The platform under it.** Kubernetes across eight environments including two GPU/DGX clusters — Kustomize overlays, StatefulSets, PDBs, RBAC, cert-manager TLS.
 
+### Side project: 3xDezine
+
+**[3xDezine](https://github.com/salimkt/3xdezine)** · [live demo](https://salimkt.github.io/3xdezine/) · [Android APK](https://github.com/salimkt/3xdezine/releases/download/android-latest/3xdezine.apk)
+
+A house and interior design tool: draw a floor plan in 2D, walk it in 3D, apply real building materials, and get a live material estimate. Rendering is three.js on **WebGPU** with image-based lighting, AgX tone mapping, GTAO, screen-space GI and reflections, and a sun that follows its real path over Mumbai. Costing is in rupees with per-material wastage, whole-pack rounding and a contingency buffer, priced from the **Maharashtra PWD Schedule of Rates**. Plan edits are checked live against **NBC 2016** room minimums, and when a change breaks one the engine proposes the nearest edit that doesn't. Includes a review mode with cost deltas, 8 Indian plan templates, and a native Android client (Jetpack Compose + Filament). First paint is **86 KB** gzipped; the 3D engine loads while you pick a template.
+
 ### Stack
 
 `Python` `FastAPI` `vLLM` `Ollama` `Hugging Face` `PyTorch` `LangChain` `CrewAI`
 `Qdrant` `FAISS` `pgvector` `Pinecone` `Cassandra` `Redis` `Kafka`
 `Whisper` `Tacotron2` `LayoutLMv3` `PaddleOCR` `OpenCV`
 `Kubernetes` `Docker` `GCP` `GitLab CI` `React` `React Native` `TypeScript`
+`three.js` `WebGPU` `Kotlin` `Jetpack Compose` `Fastify` `PostgreSQL`
 
 ---
 
