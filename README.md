@@ -32,7 +32,7 @@ I build production LLM systems end to end — agent orchestration, retrieval, mo
 
 <a href="https://salimkt.github.io/3xdezine/"><img src="https://github.com/salimkt/3xdezine/raw/main/docs/screenshots/studio.jpg" alt="3xDezine: floor plan editor, WebGPU 3D view of a 3 BHK apartment, and a live rupee estimate" width="100%"></a>
 
-A house and interior design tool: draw a floor plan in 2D, walk it in 3D, apply real building materials, and get a live material estimate. Rendering is three.js on **WebGPU** with image-based lighting, AgX tone mapping, GTAO, screen-space GI and reflections, and a sun that follows its real path over Mumbai. Costing is in rupees with per-material wastage, whole-pack rounding and a contingency buffer, with prices anchored to the **Maharashtra PWD Schedule of Rates** where it covers them. Plan edits are checked live against **NBC 2016** room minimums, and when a change breaks one the engine proposes the nearest edit that doesn't. Includes a review mode with cost deltas, 8 Indian plan templates, and a native Android client (Jetpack Compose + Filament). Accounts, sharing and version history run on a **Supabase** backend where roles are enforced server-side by the same rules engine, covered by row-level-security and end-to-end tests (not yet connected to the public demo). First paint is **86 KB** gzipped; the 3D engine loads while you pick a template.
+A house and interior design tool: draw a floor plan in 2D, walk it in 3D, apply real building materials, and get a live material estimate. Rendering is three.js on **WebGPU** with image-based lighting, AgX tone mapping, GTAO, screen-space GI and reflections, and a sun that follows its real path over Mumbai. Costing is in rupees with per-material wastage, whole-pack rounding and a contingency buffer, with prices anchored to the **Maharashtra PWD Schedule of Rates** where it covers them. Plan edits are checked live against **NBC 2016** room minimums, and when a change breaks one the engine proposes the nearest edit that doesn't. Includes a review mode with cost deltas, 8 Indian plan templates, and a native Android client (Jetpack Compose + Filament). Accounts, sharing and version history run on a **Supabase** backend where roles are enforced server-side by the same rules engine, covered by row-level-security and end-to-end tests (not yet connected to the public demo). First paint is under **90 KB** gzipped; the 3D engine loads while you pick a template.
 
 ### Stack
 
@@ -40,7 +40,7 @@ A house and interior design tool: draw a floor plan in 2D, walk it in 3D, apply 
 `Qdrant` `FAISS` `pgvector` `Pinecone` `Cassandra` `Redis` `Kafka`
 `Whisper` `Tacotron2` `LayoutLMv3` `PaddleOCR` `OpenCV`
 `Kubernetes` `Docker` `GCP` `GitLab CI` `React` `React Native` `TypeScript`
-`three.js` `WebGPU` `Kotlin` `Jetpack Compose` `Fastify` `PostgreSQL`
+`three.js` `WebGPU` `Kotlin` `Jetpack Compose` `Fastify` `PostgreSQL` `Supabase`
 
 ---
 
