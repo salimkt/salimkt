@@ -1,7 +1,7 @@
 <h1 align="center">Muhammed Salim K T</h1>
 
 <p align="center">
-  <strong>AI/ML Engineer — LLM systems, RAG, agent orchestration, speech &amp; vision</strong><br>
+  <strong>AI/ML Engineer — LLM systems, RAG, agent orchestration, data analytics, speech &amp; vision</strong><br>
   4+ years shipping production AI · Kochi, India · open to remote worldwide
 </p>
 
@@ -12,7 +12,7 @@
 
 ---
 
-I build production LLM systems end to end — agent orchestration, retrieval, model serving, and the evaluation that keeps them honest.
+I build production LLM systems end to end — agent orchestration, retrieval, model serving, and the evaluation that keeps them honest — and I turn raw business data into decisions with SQL, statistics and AI.
 
 ### What I have built
 
@@ -26,6 +26,14 @@ I build production LLM systems end to end — agent orchestration, retrieval, mo
 
 **The platform under it.** Kubernetes across eight environments including two GPU/DGX clusters — Kustomize overlays, StatefulSets, PDBs, RBAC, cert-manager TLS.
 
+### Side project: DataRat — AI decision intelligence
+
+**[DataRat](https://github.com/salimkt/DataRat)** · [live demo](https://salimkt.github.io/DataRat/) · [API docs](https://datarat-api.onrender.com/docs)
+
+<a href="https://salimkt.github.io/DataRat/"><img src="https://github.com/salimkt/DataRat/raw/main/docs/overview.png" alt="DataRat executive dashboard: KPI cards, revenue trend with Holt-Winters forecast, and automatically generated key findings" width="100%"></a>
+
+An analytics platform for business leaders: connect a data source and get an executive dashboard, then ask questions in plain English. **11 connectors** (CSV, Excel, JSON, Parquet, SQLite, PostgreSQL, MySQL, Google Sheets, REST APIs, remote files) load into an in-process **DuckDB** engine. Each dataset is profiled automatically (quality score, missing and duplicate analysis, histograms, a correlation heatmap and semantic column typing). Key numbers come with 30-day change, a **Holt-Winters forecast** with a confidence band, and **z-score anomaly detection** for spikes and dips. "Ask AI" runs a **four-agent pipeline**: a planner, an SQL engineer that corrects its own failed queries, an analyst that computes the stats and picks the chart, and a narrator that writes the executive summary and recommendations. It runs on **Gemini** or Claude and falls back to a deterministic rules engine, so it still answers without an API key. It also includes a SQL lab, a one-click printable executive brief, a read-only SQL guard and 120+ API tests. Built with FastAPI, pandas and statsmodels on Render, and React, TypeScript and Recharts on GitHub Pages.
+
 ### Side project: 3xDezine
 
 **[3xDezine](https://github.com/salimkt/3xdezine)** · [live demo](https://salimkt.github.io/3xdezine/) · [Android APK](https://github.com/salimkt/3xdezine/releases/download/android-latest/3xdezine.apk)
@@ -37,6 +45,7 @@ A house and interior design tool: draw a floor plan in 2D, walk it in 3D, apply 
 ### Stack
 
 `Python` `FastAPI` `vLLM` `Ollama` `Hugging Face` `PyTorch` `LangChain` `CrewAI`
+`SQL` `DuckDB` `pandas` `NumPy` `statsmodels` `time-series forecasting` `anomaly detection` `Recharts` `Gemini API`
 `Qdrant` `FAISS` `pgvector` `Pinecone` `Cassandra` `Redis` `Kafka`
 `Whisper` `Tacotron2` `LayoutLMv3` `PaddleOCR` `OpenCV`
 `Kubernetes` `Docker` `GCP` `GitLab CI` `React` `React Native` `TypeScript`
