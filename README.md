@@ -1,56 +1,62 @@
 <h1 align="center">Muhammed Salim K T</h1>
 
 <p align="center">
-  <strong>AI/ML Engineer — LLM systems, RAG, agent orchestration, data analytics, speech &amp; vision</strong><br>
-  4+ years shipping production AI · Kochi, India · open to remote worldwide
+  <strong>AI/ML Engineer: LLM systems, RAG, agent orchestration, speech &amp; vision</strong><br>
+  4+ years shipping production AI · Kochi, India<br>
+  Open to roles in the UAE/Gulf, Europe (with relocation) and remote
 </p>
 
 <p align="center">
-  <a href="mailto:mohdsalimkt@gmail.com">mohdsalimkt@gmail.com</a> ·
-  <a href="https://linkedin.com/in/muhammed-salim-k-t">LinkedIn</a>
+  <a href="https://muhammed-salim.onrender.com">Portfolio</a> ·
+  <a href="https://www.linkedin.com/in/muhammed-salim-k-t-498125165">LinkedIn</a> ·
+  <a href="mailto:mohdsalimkt@gmail.com">mohdsalimkt@gmail.com</a>
 </p>
 
 ---
 
-I build production LLM systems end to end — agent orchestration, retrieval, model serving, and the evaluation that keeps them honest — and I turn raw business data into decisions with SQL, statistics and AI.
+I build production LLM systems end to end: agent orchestration, retrieval, speech pipelines, model serving, and the evaluation that keeps them honest. Most of it runs on-premise and air-gapped inside enterprise customers' own infrastructure.
 
-### What I have built
+### At a glance
 
-**A multi-agent / tool-calling engine.** I authored `bm-agent-engine`, the orchestration layer behind an on-premise enterprise LLM platform, as a drop-in replacement for its CrewAI-based stack — roughly 49,000 lines of Python. A 73-toolset registry, ReAct agents with tiered escalation, structured delegate/ask/finish delegation, and a FAST/SMALL/LARGE/THINKING router over vLLM and Ollama. Re-architecting it so the model makes only narrow, schema-validated decisions let a **12B model do the work the previous stack needed a 32B model for** — enough GPU saving to run the whole platform on a single node. It cut over with one config change, because the SSE event contract was preserved exactly.
+- **12B → 32B-class:** my multi-agent engine lets a 12B model do 32B-class work, moving each deployment from a GPU cluster to a single node
+- **10M+ embeddings** in production RAG, serving **10k+ queries/day**
+- **+45%** answer accuracy over the bare-LLM baseline, **1.8 s** average inference latency, **99.7%** uptime
+- **94%** speech-to-text accuracy and **92%** live-caption accuracy in production
+- **50k+ concurrent users** on real-time WebSocket / REST services
+- **8 Kubernetes environments**, including **two GPU/DGX clusters**
 
-**RAG at 10M+ embeddings.** Chunking, Sentence-Transformers embeddings, a Cassandra vector-store schema tuned for similarity search, and hybrid BM25 + dense retrieval with re-ranking. Served behind vLLM at **1.8s median latency and 99.7% uptime**, and +45% answer accuracy over the bare LLM baseline.
+### What I have built at work
 
-**Speech, both directions.** Whisper STT at 94% accuracy and Tacotron2 TTS, with live captioning shipped into a production video-calling product at 92%.
+**Multi-agent tool-calling engine.** `bm-agent-engine` replaced the CrewAI-based orchestration of an on-premise enterprise LLM platform and now serves all its agent traffic; I was the largest contributor to its ~49k lines. A 73-toolset registry, ReAct agents with tiered escalation, and a FAST / SMALL / LARGE / THINKING router over vLLM and Ollama. Because the SSE event contract was kept exactly, the UI cut over with a single config change.
 
-**Vision and documents.** PaddleOCR-VL and Qwen-VL served through Transformers with CUDA and attention-implementation tuning; four OCR engines wired into the retrieval pipeline; LayoutLMv3 fine-tuned to **91% F1** across 100K+ documents a month.
+**Enterprise RAG.** Docling + RapidOCR ingestion, Sentence-Transformers embeddings, a Cassandra vector schema, and hybrid keyword + semantic retrieval with re-ranking over 10M+ embeddings. Quantization, batching and caching brought average inference to 1.8 s; model failover and warm caching hold 99.7% uptime.
 
-**The platform under it.** Kubernetes across eight environments including two GPU/DGX clusters — Kustomize overlays, StatefulSets, PDBs, RBAC, cert-manager TLS.
+**Speech AI in production.** A transcription service for a US hosted-telephony provider's voicemail and call recordings: NVIDIA Canary and Whisper on vLLM with automatic failover, Redis priority queues and Celery workers, recordings up to 10 hours, and speaker diarization. Also: Whisper STT (94%), Tacotron2 TTS and live captions (92%) in a video-calling product.
 
-### Side project: DataRat — AI decision intelligence
+**Vision and documents.** PaddleOCR-VL and Qwen-VL served through Transformers, a pluggable OCR layer feeding RAG, and LayoutLMv3 fine-tuned to 91% F1 on 100K+ documents a month.
 
-**[DataRat](https://github.com/salimkt/DataRat)** · [live demo](https://salimkt.github.io/DataRat/) · [API docs](https://datarat-api.onrender.com/docs)
+### Selected public work
 
-<a href="https://salimkt.github.io/DataRat/"><img src="https://github.com/salimkt/DataRat/raw/main/docs/overview.png" alt="DataRat executive dashboard: KPI cards, revenue trend with Holt-Winters forecast, and automatically generated key findings" width="100%"></a>
+| Project | What it is |
+|---|---|
+| **[DataRat](https://github.com/salimkt/DataRat)** · [live demo](https://salimkt.github.io/DataRat/) | AI data analyst. Connect 11 kinds of data source and get KPIs, anomalies and Holt-Winters forecasts; a Planner → SQL → Analyst → Narrator agent pipeline answers plain-English questions, with a rules engine as fallback and a read-only SQL guard. FastAPI, DuckDB, React. |
+| **[3xDezine](https://github.com/salimkt/3xdezine)** · [live demo](https://salimkt.github.io/3xdezine/) | Home design and costing. 2D floor plan to WebGPU 3D walkthrough with a live material estimate and GST-ready quotation; 300+ unit tests and 136 pgTAP database assertions. TypeScript, Fastify, Supabase, Kotlin. |
+| **[small-model-agents](https://github.com/salimkt/small-model-agents)** | Reference implementation of reliable agents on small models: schema-validated tool calling, tiered routing, evidence-based escalation, an MCP server, and an eval harness whose CI gate blocks regressions. Python stdlib. |
+| **[web-share](https://github.com/salimkt/web-share)** · [live demo](https://salimkt.github.io/web-share/) | Peer-to-peer WebRTC file sharing as a PWA, with end-to-end-encrypted MQTT signalling or offline QR pairing. No server, no accounts. |
 
-An analytics platform for business leaders: connect a data source and get an executive dashboard, then ask questions in plain English. **11 connectors** (CSV, Excel, JSON, Parquet, SQLite, PostgreSQL, MySQL, Google Sheets, REST APIs, remote files) load into an in-process **DuckDB** engine. Each dataset is profiled automatically (quality score, missing and duplicate analysis, histograms, a correlation heatmap and semantic column typing). Key numbers come with 30-day change, a **Holt-Winters forecast** with a confidence band, and **z-score anomaly detection** for spikes and dips. "Ask AI" runs a **four-agent pipeline**: a planner, an SQL engineer that corrects its own failed queries, an analyst that computes the stats and picks the chart, and a narrator that writes the executive summary and recommendations. It runs on **Gemini** or Claude and falls back to a deterministic rules engine, so it still answers without an API key. It also includes a SQL lab, a one-click printable executive brief, a read-only SQL guard and 120+ API tests. Built with FastAPI, pandas and statsmodels on Render, and React, TypeScript and Recharts on GitHub Pages.
-
-### Side project: 3xDezine
-
-**[3xDezine](https://github.com/salimkt/3xdezine)** · [live demo](https://salimkt.github.io/3xdezine/) · [Android APK](https://github.com/salimkt/3xdezine/releases/download/android-latest/3xdezine.apk)
-
-<a href="https://salimkt.github.io/3xdezine/"><img src="https://github.com/salimkt/3xdezine/raw/main/docs/screenshots/studio.jpg" alt="3xDezine: floor plan editor, WebGPU 3D view of a 3 BHK apartment, and a live rupee estimate" width="100%"></a>
-
-A house and interior design tool: draw a floor plan in 2D, walk it in 3D, apply real building materials, and get a live material estimate. Rendering is three.js on **WebGPU** with image-based lighting, AgX tone mapping, GTAO, screen-space GI and reflections, and a sun that follows its real path over Mumbai. Costing is in rupees with per-material wastage, whole-pack rounding and a contingency buffer, with prices anchored to the **Maharashtra PWD Schedule of Rates** where it covers them. Plan edits are checked live against **NBC 2016** room minimums, and when a change breaks one the engine proposes the nearest edit that doesn't. Includes a review mode with cost deltas, 8 Indian plan templates, and a native Android client (Jetpack Compose + Filament). Accounts, sharing and version history run on a **Supabase** backend where roles are enforced server-side by the same rules engine, covered by row-level-security and end-to-end tests (not yet connected to the public demo). First paint is under **90 KB** gzipped; the 3D engine loads while you pick a template.
+<p>
+  <a href="https://salimkt.github.io/DataRat/"><img src="https://github.com/salimkt/DataRat/raw/main/docs/overview.png" alt="DataRat executive dashboard with KPI cards, a Holt-Winters forecast and generated key findings" width="49%"></a>
+  <a href="https://salimkt.github.io/3xdezine/"><img src="https://github.com/salimkt/3xdezine/raw/main/docs/screenshots/studio.jpg" alt="3xDezine studio with floor plan editor, WebGPU 3D view and live estimate" width="49%"></a>
+</p>
 
 ### Stack
 
-`Python` `FastAPI` `vLLM` `Ollama` `Hugging Face` `PyTorch` `LangChain` `CrewAI`
-`SQL` `DuckDB` `pandas` `NumPy` `statsmodels` `time-series forecasting` `anomaly detection` `Recharts` `Gemini API`
-`Qdrant` `FAISS` `pgvector` `Pinecone` `Cassandra` `Redis` `Kafka`
-`Whisper` `Tacotron2` `LayoutLMv3` `PaddleOCR` `OpenCV`
-`Kubernetes` `Docker` `GCP` `GitLab CI` `React` `React Native` `TypeScript`
-`three.js` `WebGPU` `Kotlin` `Jetpack Compose` `Fastify` `PostgreSQL` `Supabase`
+`Python` `FastAPI` `Django` `Celery` `vLLM` `Ollama` `Hugging Face` `PyTorch` `LangChain` `CrewAI` `MCP`
+`Cassandra` `pgvector` `Qdrant` `FAISS` `PostgreSQL` `DuckDB` `Redis` `Kafka` `RabbitMQ`
+`Whisper` `NVIDIA Canary` `Tacotron2` `LayoutLMv3` `PaddleOCR-VL` `Qwen-VL`
+`Kubernetes` `Docker` `GCP` `GitLab CI` `GitHub Actions`
+`TypeScript` `React` `React Native` `three.js` `Kotlin`
 
 ---
 
-Currently an AI/ML engineer at Netstratum Technologies. Open to remote roles worldwide — **mohdsalimkt@gmail.com**.
+AI/ML engineer at Netstratum Technologies since June 2022. Open to roles in the UAE/Gulf, Europe (with relocation) and remote: **mohdsalimkt@gmail.com**
