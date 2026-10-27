@@ -49,6 +49,15 @@ I build production LLM systems end to end: agent orchestration, retrieval, speec
   <a href="https://salimkt.github.io/3xdezine/"><img src="https://github.com/salimkt/3xdezine/raw/main/docs/screenshots/studio.jpg" alt="3xDezine studio with floor plan editor, WebGPU 3D view and live estimate" width="49%"></a>
 </p>
 
+### Open-source contributions
+
+| Project | Contribution | Status |
+|---|---|---|
+| [Celery](https://github.com/celery/celery) | [Log at INFO when a prefork child is recycled](https://github.com/celery/celery/pull/10968) | In review |
+| [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) | MCP server and doc2md fixes: [#18416](https://github.com/PaddlePaddle/PaddleOCR/pull/18416), [#18417](https://github.com/PaddlePaddle/PaddleOCR/pull/18417), [#18418](https://github.com/PaddlePaddle/PaddleOCR/pull/18418) | In review |
+| [vLLM](https://github.com/vllm-project/vllm) | [Design for multi-channel audio reduction](https://github.com/vllm-project/vllm/issues/55986) | Proposed |
+| [silero-vad](https://github.com/snakers4/silero-vad) | [Asymmetric speech padding](https://github.com/snakers4/silero-vad/issues/798) | Proposed |
+
 ### Stack
 
 `Python` `FastAPI` `Django` `Celery` `vLLM` `Ollama` `Hugging Face` `PyTorch` `LangChain` `CrewAI` `MCP`
